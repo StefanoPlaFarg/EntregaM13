@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 public class Employee {
 	
-	private static int id=1;
+	private static int ID=1;
 	private double salary;
 	private String name;
 	
@@ -23,18 +23,19 @@ public class Employee {
 	
 	public Employee () {
 		
-		id=id++;
+		ID=ID++;
 		
 	}
 	
-	public static int getId() {
-		return id;
+	public static int getID() {
+		return ID;
 	}
+	
 	/**
 	 * @param id the id to set
 	 */
 	public static void setId(int id) {
-		Employee.id = id;
+		Employee.ID = id;
 	}
 	/**
 	 * @return the salary
