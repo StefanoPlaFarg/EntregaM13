@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.repository;
+package com.service;
 
 /**
  * @author stefano

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.service;
+package com.controller;
 
 /**
  * @author stefano
