@@ -27,6 +27,17 @@ public class Employee {
 		
 	}
 	
+    public Employee (String name, double salary, Jobs job) {
+		
+		this();
+		this.name=name;
+		this.salary=salary;
+		this.job=job;
+		
+		
+	}
+	
+	
 	public static int getID() {
 		return ID;
 	}
