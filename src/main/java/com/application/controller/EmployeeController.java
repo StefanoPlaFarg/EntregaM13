@@ -23,21 +23,28 @@ import com.application.service.EmployeeService;
  */
 
 @RestController
-//@RequestMapping("/api")
+@RequestMapping("/api")
 public class EmployeeController {
 
-	//@Autowired
-	//EmployeeService employeeService;
+	@Autowired
+	EmployeeService employeeService;	
+	
 
 	// http://localhost:8080/api/test (GET)
-	//@RequestMapping(value = "/test", method = RequestMethod.GET, produces = "application/json")
-	//@ResponseBody
-	@GetMapping("/test")
+	@RequestMapping(value = "/test", method = RequestMethod.GET, produces = "application/json")
+	@ResponseBody
+	//@GetMapping("/test")
 	public String test() {
+		
+		
+		employeeService.saveEmployee(new Employee ("Juan",30 ));
+		employeeService.saveEmployee(new Employee ("Sara",20 ));
+		
 		return "Test done";
+		
 	}
 
-	/*
+	
 	
 	// http://localhost:8080/api/employees (GET) -> GET all Employees
 	@RequestMapping(path = "/employees", method = RequestMethod.GET, produces = "application/json")
@@ -67,12 +74,13 @@ public class EmployeeController {
 	@RequestMapping(path = "/employees/add", method = RequestMethod.POST, produces = "application/json")
 	@ResponseBody
 	public String addEmployee(@RequestBody Employee newEmployee) {
-
-		return employeeService.saveEmployee(newEmployee);
+ 
+		String message = employeeService.saveEmployee(newEmployee);
+		return message;
 
 	}
 
-	// http://localhost:8080/api/employees/delete/id (PUT) -> UPDATE Employee by ID
+	// http://localhost:8080/api/employees/id (PUT) -> UPDATE Employee by ID
 	@RequestMapping(path = "/employees/{id}", method = RequestMethod.PUT, produces = "application/json")
 	@ResponseBody
 	public String updateEmployeeById(@PathVariable("id") int id, @RequestBody Employee employeeUpdated) {
@@ -88,7 +96,7 @@ public class EmployeeController {
 
 	}
     
-    */
+    
 	
 
 }
