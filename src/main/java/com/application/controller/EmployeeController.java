@@ -27,25 +27,16 @@ import com.application.service.EmployeeService;
 public class EmployeeController {
 
 	@Autowired
-	EmployeeService employeeService;	
-	
+	EmployeeService employeeService;
 
 	// http://localhost:8080/api/test (GET)
 	@RequestMapping(value = "/test", method = RequestMethod.GET, produces = "application/json")
 	@ResponseBody
-	//@GetMapping("/test")
+	// @GetMapping("/test")
 	public String test() {
-		
-		
-		employeeService.saveEmployee(new Employee ("Juan",30 ));
-		employeeService.saveEmployee(new Employee ("Sara",20 ));
-		
 		return "Test done";
-		
 	}
 
-	
-	
 	// http://localhost:8080/api/employees (GET) -> GET all Employees
 	@RequestMapping(path = "/employees", method = RequestMethod.GET, produces = "application/json")
 	@ResponseBody
@@ -74,7 +65,7 @@ public class EmployeeController {
 	@RequestMapping(path = "/employees/add", method = RequestMethod.POST, produces = "application/json")
 	@ResponseBody
 	public String addEmployee(@RequestBody Employee newEmployee) {
- 
+
 		String message = employeeService.saveEmployee(newEmployee);
 		return message;
 
@@ -95,8 +86,6 @@ public class EmployeeController {
 		return employeeService.deleteEmployee(id);
 
 	}
-    
-    
 	
 
 }
