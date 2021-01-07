@@ -48,7 +48,7 @@ public class EmployeeService {
 		
 		if (employeeRepository.get(id) != null) {
 
-			employeeRepository.get(id).setJob(employeeUpdated.getJob());
+			//employeeRepository.get(id).setJob(employeeUpdated.getJob());
 			employeeRepository.get(id).setName(employeeUpdated.getName());
 			employeeRepository.get(id).setSalary(employeeUpdated.getSalary());
 			 
@@ -89,7 +89,7 @@ public class EmployeeService {
    //Delete All Employees
      public String deleteAllEmployees () {
 		
-		if (employeeRepository.isEmpty() != false) {
+		if (employeeRepository.isEmpty() == false) {
 
 			employeeRepository.removeAll(employeeRepository);
 			
