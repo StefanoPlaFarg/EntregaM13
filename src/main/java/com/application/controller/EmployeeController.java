@@ -55,7 +55,7 @@ public class EmployeeController {
 	}
 
 	// http://localhost:8080/api/employees (DELETE) -> DELETE all Employees
-	@RequestMapping(path = "/employees/", method = RequestMethod.DELETE, produces = "application/json")
+	@RequestMapping(path = "/employees", method = RequestMethod.DELETE, produces = "application/json")
 	@ResponseBody
 	public String deleteAllEmployees() {
 		return employeeService.deleteAllEmployees();
