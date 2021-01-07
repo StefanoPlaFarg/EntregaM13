@@ -78,5 +78,28 @@ public class EmployeeService {
 	}
 	
 	
+     
+   //Get all Employees
+     public List<Employee> getAllEmployees () {
+		
+		return employeeRepository;
+	}
+     
+     
+     
+   //Delete All Employees
+     public String deleteAllEmployees () {
+		
+		if (employeeRepository.isEmpty() != false) {
+
+			employeeRepository.removeAll(employeeRepository);
+			
+			return "All Employees deleted";
+
+		}
+		
+		return "Any Employee found";
+	}
+     
 	
 }
