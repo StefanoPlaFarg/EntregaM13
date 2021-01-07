@@ -15,8 +15,8 @@ public class Employee {
 	private double salary;
 	private String name;
 	
-	@Autowired
-	private Jobs job;
+	//@Autowired
+	//private Jobs job;
 	/**
 	 * @return the id
 	 */
@@ -27,12 +27,25 @@ public class Employee {
 		
 	}
 	
-    public Employee (String name, double salary, Jobs job) {
+   
+    public Employee (String name, double salary) {
 		
 		this();
 		this.name=name;
 		this.salary=salary;
-		this.job=job;
+		//this.job=job;
+		
+		
+	}
+	
+	
+	
+	public Employee (String name, double salary, Jobs job) {
+		
+		this();
+		this.name=name;
+		this.salary=salary;
+		//this.job=job;
 		
 		
 	}
@@ -72,20 +85,31 @@ public class Employee {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	
+	
+	
+	
 	/**
 	 * @return the job
 	 */
+	
+	/*
 	public Jobs getJob() {
 		return job;
 	}
+	
+	/*
 	/**
 	 * @param job the job to set
 	 */
+	
+	/*
 	public void setJob(Jobs job) {
 		this.job = job;
 	}
 	
-	
+	*/
 	
 	
 
