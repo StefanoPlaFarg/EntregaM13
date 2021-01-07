@@ -1,12 +1,12 @@
 /**
  * 
  */
-package com.controller;
+package com.application.controller;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.domain.Employee;
-import com.service.EmployeeService;
+import com.application.domain.Employee;
+import com.application.service.EmployeeService;
 
 /**
  * @author stefano
@@ -23,19 +23,22 @@ import com.service.EmployeeService;
  */
 
 @RestController
-@RequestMapping("/api")
+//@RequestMapping("/api")
 public class EmployeeController {
 
-	@Autowired
-	EmployeeService employeeService;
+	//@Autowired
+	//EmployeeService employeeService;
 
 	// http://localhost:8080/api/test (GET)
-	@RequestMapping(value = "/test", method = RequestMethod.GET, produces = "application/json")
-	@ResponseBody
+	//@RequestMapping(value = "/test", method = RequestMethod.GET, produces = "application/json")
+	//@ResponseBody
+	@GetMapping("/test")
 	public String test() {
 		return "Test done";
 	}
 
+	/*
+	
 	// http://localhost:8080/api/employees (GET) -> GET all Employees
 	@RequestMapping(path = "/employees", method = RequestMethod.GET, produces = "application/json")
 	@ResponseBody
@@ -45,7 +48,7 @@ public class EmployeeController {
 	}
 
 	// http://localhost:8080/api/employees (DELETE) -> DELETE all Employees
-	@RequestMapping(value = "/employees/", method = RequestMethod.DELETE, produces = "application/json")
+	@RequestMapping(path = "/employees/", method = RequestMethod.DELETE, produces = "application/json")
 	@ResponseBody
 	public String deleteAllEmployees() {
 		return employeeService.deleteAllEmployees();
@@ -78,13 +81,14 @@ public class EmployeeController {
 	}
 
 	// http://localhost:8080/api/employees/id (DELETE) -> DELETE Employee by ID
-	@RequestMapping(value = "/employees/delete/{id}", method = RequestMethod.DELETE, produces = "application/json")
+	@RequestMapping(path = "/employees/delete/{id}", method = RequestMethod.DELETE, produces = "application/json")
 	@ResponseBody
 	public String deleteEmployee(@PathVariable("id") int id) {
 		return employeeService.deleteEmployee(id);
 
 	}
-
+    
+    */
 	
 
 }

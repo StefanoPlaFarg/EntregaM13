@@ -1,14 +1,14 @@
 /**
  * 
  */
-package com.service;
+package com.application.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.domain.Employee;
+import com.application.domain.Employee;
 
 /**
  * @author stefano

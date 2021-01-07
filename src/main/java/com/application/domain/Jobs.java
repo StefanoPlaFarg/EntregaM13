@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.domain;
+package com.application.domain;
 
 /**
  * @author stefano
