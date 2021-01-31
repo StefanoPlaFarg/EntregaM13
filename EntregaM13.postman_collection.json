@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "719785fa-d0a1-407c-b5aa-18fc39377bbb",
+		"name": "EntregaM13",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TEST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"test"
+					]
+				},
+				"description": "Comprovem que el servei funciona"
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE_NewEmployee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pau\",\r\n    \"salary\": 100,\r\n    \"job\": \"ENGINEER\"\r\n  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/employees/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						"add"
+					]
+				},
+				"description": "Creem un nou Employee\r\n\r\nNota: per crear-lo, s'ha de crear un JSON al Body de la Request amb la següent estructura:\r\n\r\n{\r\n    \"name\": \"Marina\",\r\n    \"salary\": 500,\r\n    \"job\": \"MANAGER\"\r\n  \r\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "GET_AllEmployees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees"
+					]
+				},
+				"description": "Retorna tots els Employees en format JSON\r\n\r\nFormat:\r\n[\r\n    {\r\n        \"salary\": 400.0,\r\n        \"name\": \"Pau\",\r\n        \"job\": \"WORKER\"\r\n    },\r\n    {\r\n        \"salary\": 500.0,\r\n        \"name\": \"Marina\",\r\n        \"job\": \"MANAGER\"\r\n    }\r\n]"
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE_EmployeeById",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Laura\",\r\n    \"salary\": 500\r\n  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/employees/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						"1"
+					]
+				},
+				"description": "Actualitza un Employee a partir de l'ID especificat a l'URL\r\n\r\nNota: s'ha d'indicar l'Id a l'URL i s'ha d'adjuntar un JSON al Body de la Request de l'estil:\r\n\r\n{\r\n    \"name\": \"Marina\",\r\n    \"salary\": 500,\r\n    \"job\": \"MANAGER\"\r\n  \r\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE_EmployeeById Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Laura\",\r\n    \"salary\": 500\r\n  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/employees/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						"1"
+					]
+				},
+				"description": "Actualitza un Employee a partir de l'ID especificat a l'URL\r\n\r\nNota: s'ha d'indicar l'Id a l'URL i s'ha d'adjuntar un JSON al Body de la Request de l'estil:\r\n\r\n{\r\n    \"name\": \"Marina\",\r\n    \"salary\": 500,\r\n    \"job\": \"MANAGER\"\r\n  \r\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_EmployeeById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employees/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						"delete",
+						"1"
+					]
+				},
+				"description": "Borrem un Employee a partir de l'Id de l'URL"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_AllEmployees",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employees/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						""
+					]
+				},
+				"description": "Borrem tots els Employees"
+			},
+			"response": []
+		},
+		{
+			"name": "GET_EmployeeById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employees/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employees",
+						"3"
+					]
+				},
+				"description": "Retorna un Employee a partir de l'Id especificat en format JSON"
+			},
+			"response": []
+		}
+	]
+}
