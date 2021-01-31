@@ -7,7 +7,7 @@ Entrega M13 sobre Spring
 * Utilitzar la col.lecció de Postman per testejar l'API: EntregaM13.postman_collection.json
 
 ### Nivell 1
-* Fase 1 -> Branca fase1
+* Fase 1 -> Branca master
 
 
 
